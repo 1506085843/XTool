@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton layoutX="242.0" layoutY="344.0" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: #4e6ef2;" text="登录" textFill="#f5f5f5" />
+      <Label layoutX="180.0" layoutY="232.0" text="用户名 :" />
+      <Label layoutX="180.0" layoutY="286.0" text="密码 :" />
+      <JFXTextField layoutX="250.0" layoutY="216.0" />
+      <JFXPasswordField layoutX="250.0" layoutY="270.0" />
+      <ImageView fitHeight="117.0" fitWidth="139.0" layoutX="242.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/login.jpg" />
+         </image></ImageView>
+   </children>
+</Pane>
