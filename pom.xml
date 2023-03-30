@@ -71,7 +71,7 @@
 
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.xtool.components/com.Application</mainClass>
+                            <mainClass>com.xtool.components/com.Appass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
