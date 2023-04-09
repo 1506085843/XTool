@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<StackPane fx:id="root" xmlns:fx="http://javafx.com/fxml/1"
+           xmlns="http://javafx.com/javafx/2.2">
+
+    <VBox prefWidth="300" spacing="40" maxWidth="400" alignment="CENTER">
+        <children>
+            <JFXTextField promptText="Type Something">
+            </JFXTextField>
+            <JFXTextField promptText="Im disabled" disable="true">
+            </JFXTextField>
+            <JFXTextField id="validatedText" promptText="With validation">
+                <validators>
+                    <RequiredFieldValidator message="Input Required!">
+                        <FontIcon iconLiteral="fas-exclamation-triangle"/>
+                    </RequiredFieldValidator>
+                </validators>
+            </JFXTextField>
+            <JFXPasswordField id="validatedPassword" promptText="Password"
+                              labelFloat="true">
+                <validators>
+                    <RequiredFieldValidator message="Input Required!">
+                        <FontIcon iconLiteral="fas-exclamation-triangle"/>
+                    </RequiredFieldValidator>
+                </validators>
+            </JFXPasswordField>
+            <JFXTextArea id="jfxTextArea" promptText="What do you think of JFoenix?"
+                         labelFloat="true" maxWidth="300" minHeight="200">
+                <validators>
+                    <RequiredFieldValidator message="We would love to get your feedback.">
+                        <FontIcon iconLiteral="fas-exclamation-triangle"/>
+                    </RequiredFieldValidator>
+                </validators>
+            </JFXTextArea>
+        </children>
+    </VBox>
+</StackPane>
