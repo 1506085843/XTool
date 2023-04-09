@@ -102,6 +102,9 @@ public class SideMenuController {
     @ActionTrigger("searchWord")
     private Label searchWord;
     @FXML
+    @ActionTrigger("lotteryTicket")
+    private Label lotteryTicket;
+    @FXML
     private JFXListView<Label> sideList;
 
     /**
@@ -154,6 +157,7 @@ public class SideMenuController {
         bindNodeToController(aesEncode, AesEncodeController.class, contentFlow );
         bindNodeToController(jsonFormat, JsonFormateController.class, contentFlow );
         bindNodeToController(searchWord, SearchWordController.class, contentFlow );
+        bindNodeToController(lotteryTicket, LotteryTicketController.class, contentFlow );
     }
 
     private void bindNodeToController(Node node, Class<?> controllerClass, Flow flow) {

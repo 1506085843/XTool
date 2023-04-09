@@ -35,5 +35,6 @@
         <Label fx:id="aesEncode">Aes加/解密</Label>
         <Label fx:id="jsonFormat">json解析</Label>
         <Label fx:id="searchWord">多文件中搜索</Label>
+        <Label fx:id="lotteryTicket">彩票随机生成</Label>
     </JFXListView>
 </StackPane>
