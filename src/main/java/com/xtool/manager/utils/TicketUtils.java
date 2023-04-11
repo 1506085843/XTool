@@ -10,18 +10,17 @@ public class TicketUtils {
     /**
      * 向list里生成count个随机数，随机数的范围[start,end)
      */
-    public static void randomNumber(List<Integer> list, int count, int start, int end,boolean isRepeat) {
-        Random r = new Random();
+    public static void randomNumber(List<Integer> list, int count, int start, int end, boolean isRepeat) {
         int temp = 0;
         while (temp != count) {
             //生成1个start到end的随机数,不包括end
-            int randomNumber = r.ints(1, start, end).findFirst().getAsInt();
-            if (!isRepeat){
-                if ( !list.contains(randomNumber)) {
-                    list.add(randomNumber);
-                    temp++;
-                }
-            }else{
+            Random random = new Random();
+            int randomNumber = random.nextInt(end - start) + start;
+            if (!isRepeat && !list.contains(randomNumber)) {
+                list.add(randomNumber);
+                temp++;
+            }
+            if (isRepeat) {
                 list.add(randomNumber);
                 temp++;
             }
@@ -32,13 +31,12 @@ public class TicketUtils {
      * 福彩3D
      */
     public static List<String> threeD(int amount) {
-        List<String> result=new ArrayList<>();
+        List<String> result = new ArrayList<>();
         for (int i = 1; i <= amount; i++) {
             List<Integer> list = new ArrayList<>();
-            randomNumber(list, 3, 0, 10,true);
-            Collections.sort(list);
+            randomNumber(list, 3, 0, 10, true);
             result.add(list.stream().map(String::valueOf).collect(Collectors.joining(", ")));
-            }
+        }
         return result;
     }
 
@@ -46,10 +44,10 @@ public class TicketUtils {
      * 七乐彩
      */
     public static List<String> sevenTicket(int amount) {
-        List<String> result=new ArrayList<>();
+        List<String> result = new ArrayList<>();
         for (int i = 1; i <= amount; i++) {
             List<Integer> list = new ArrayList<>();
-            randomNumber(list, 7, 1, 31,false);
+            randomNumber(list, 7, 1, 31, false);
             Collections.sort(list);
             result.add(list.stream().map(String::valueOf).collect(Collectors.joining(", ")));
         }
@@ -61,12 +59,11 @@ public class TicketUtils {
      * 七星彩
      */
     public static List<String> sevenStartTicket(int amount) {
-        List<String> result=new ArrayList<>();
+        List<String> result = new ArrayList<>();
         for (int i = 1; i <= amount; i++) {
             List<Integer> list = new ArrayList<>();
-            randomNumber(list, 6, 0, 10,true);
-            Collections.sort(list);
-            randomNumber(list, 1, 0, 15,false);
+            randomNumber(list, 6, 0, 10, true);
+            randomNumber(list, 1, 0, 15, false);
             result.add(list.stream().map(String::valueOf).collect(Collectors.joining(", ")));
         }
         return result;
@@ -76,11 +73,10 @@ public class TicketUtils {
      * 排列3
      */
     public static List<String> arrangeThree(int amount) {
-        List<String> result=new ArrayList<>();
+        List<String> result = new ArrayList<>();
         for (int i = 1; i <= amount; i++) {
             List<Integer> list = new ArrayList<>();
-            randomNumber(list, 3, 0, 10,true);
-            Collections.sort(list);
+            randomNumber(list, 3, 0, 10, true);
             result.add(list.stream().map(String::valueOf).collect(Collectors.joining(", ")));
         }
         return result;
@@ -90,11 +86,10 @@ public class TicketUtils {
      * 排列5
      */
     public static List<String> arrangeFive(int amount) {
-        List<String> result=new ArrayList<>();
+        List<String> result = new ArrayList<>();
         for (int i = 1; i <= amount; i++) {
             List<Integer> list = new ArrayList<>();
-            randomNumber(list, 5, 0, 10,true);
-            Collections.sort(list);
+            randomNumber(list, 5, 0, 10, true);
             result.add(list.stream().map(String::valueOf).collect(Collectors.joining(", ")));
         }
         return result;
@@ -104,19 +99,18 @@ public class TicketUtils {
      * 大乐透模拟号码
      */
     public static List<String> lotteryTicket(int amount) {
-        List<String> result=new ArrayList<>();
+        List<String> result = new ArrayList<>();
         for (int i = 1; i <= amount; i++) {
             List<Integer> list = new ArrayList<>();
-             randomNumber(list, 5, 1, 36,false);
+            randomNumber(list, 5, 1, 36, false);
             Collections.sort(list);
-             randomNumber(list, 2, 1, 13,false);
+            randomNumber(list, 2, 1, 13, false);
             if (list.get(5) > list.get(6)) {
                 int temp = list.get(5);
                 list.set(5, list.get(6));
                 list.set(6, temp);
             }
             result.add(list.stream().map(String::valueOf).collect(Collectors.joining(", ")));
-            //System.out.println("大乐透第" + i + "注：" + list.stream().map(v->String.valueOf(v)).collect(Collectors.joining(", ")));
         }
         return result;
     }
@@ -125,14 +119,13 @@ public class TicketUtils {
      * 双色球模拟号码
      */
     public static List<String> twoColorBall(int amount) {
-        List<String> result=new ArrayList<>();
+        List<String> result = new ArrayList<>();
         for (int i = 1; i <= amount; i++) {
             List<Integer> list = new ArrayList<>();
-            randomNumber(list, 6, 1, 34,false);
+            randomNumber(list, 6, 1, 34, false);
             Collections.sort(list);
-            randomNumber(list, 1, 1, 17,false);
+            randomNumber(list, 1, 1, 17, false);
             result.add(list.stream().map(String::valueOf).collect(Collectors.joining(", ")));
-            //System.out.println("双色球第" + i + "注：" + list.stream().map(v->String.valueOf(v)).collect(Collectors.joining(", ")));
         }
         return result;
     }
