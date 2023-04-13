@@ -38,7 +38,7 @@ public class MainDemo extends Application {
         decorator.setCustomMaximize(true);
         decorator.setGraphic(new SVGGlyph(""));
 
-        stage.setTitle("JFoenix Demo");
+        stage.setTitle("XTool");
 
         double width = 800;
         double height = 600;

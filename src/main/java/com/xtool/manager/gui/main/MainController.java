@@ -11,6 +11,7 @@ import com.jfoenix.controls.JFXTooltip;
 import com.xtool.manager.datafx.ExtendedAnimatedFlowContainer;
 import com.xtool.manager.gui.sidemenu.SideMenuController;
 import com.xtool.manager.gui.uicomponents.ButtonController;
+import com.xtool.manager.gui.uicomponents.UrlEncodeController;
 import io.datafx.controller.ViewController;
 import io.datafx.controller.flow.Flow;
 import io.datafx.controller.flow.FlowHandler;
@@ -95,7 +96,7 @@ public final class MainController {
         // create the inner flow and content
         context = new ViewFlowContext();
         // set the default controller
-        Flow innerFlow = new Flow(ButtonController.class);
+        Flow innerFlow = new Flow(UrlEncodeController.class);
 
         final FlowHandler flowHandler = innerFlow.createHandler(context);
         context.register("ContentFlowHandler", flowHandler);
