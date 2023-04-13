@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Spring-Boot-Classpath-Index: BOOT-INF/classpath.idx
+Archiver-Version: Plexus Archiver
+Built-By: kingdee
+Start-Class: com.xtool.manager.MainDemo
+Spring-Boot-Classes: BOOT-INF/classes/
+Spring-Boot-Lib: BOOT-INF/lib/
+Spring-Boot-Version: 2.3.0.RELEASE
+Created-By: Apache Maven 3.8.1
+Build-Jdk: 1.8.0_144
+Main-Class: com.xtool.manager.MainDemo
+
