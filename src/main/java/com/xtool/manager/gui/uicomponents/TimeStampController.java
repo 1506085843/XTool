@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
-@ViewController(value = "/fxml/ui/timeStamp.fxml", title = "时间戳工具")
+@ViewController(value = "/fxml/ui/TimeStamp.fxml", title = "时间戳工具")
 public class TimeStampController {
 
     @FXML
