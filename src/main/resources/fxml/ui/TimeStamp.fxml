@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="root" xmlns:fx="http://javafx.com/fxml/1"
+           xmlns="http://javafx.com/javafx/2.2">
+    <VBox  maxHeight="1050" maxWidth="1400" spacing="30" alignment="CENTER">
+        <children>
+            <HBox spacing="50" maxWidth="800" maxHeight="300" alignment="CENTER_LEFT" >
+                <TextField fx:id="inputStamp" promptText="请输入时间戳" prefWidth="200" prefHeight="33" />
+                <VBox spacing="10">
+                    <JFXComboBox fx:id="stampUnit" prefWidth="100" >
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <Label>
+                                    毫秒
+                                </Label>
+                                <Label>
+                                    秒
+                                </Label>
+                            </FXCollections>
+                        </items>
+                    </JFXComboBox>
+                </VBox>
+                <JFXButton fx:id="stampToTime"  style="-fx-background-color: #5cb85c;" text="时间戳转时间" textFill="WHITE" />
+                <TextField fx:id="resultTime" promptText="转换后的时间" prefWidth="200" prefHeight="33" />
+            </HBox>
+
+
+            <HBox spacing="50" maxWidth="800" maxHeight="300" alignment="CENTER_LEFT" style="-fx-padding:20 0 0 0 ">
+                <TextField fx:id="inputTime" promptText="请输入时间" prefWidth="200" prefHeight="33" />
+                <JFXButton fx:id="timeToStamp"  style="-fx-background-color: #5cb85c;" text="时间转时间戳" textFill="WHITE" />
+                <TextField fx:id="resultStamp" promptText="转换后的时间戳" prefWidth="200" prefHeight="33" />
+                <VBox spacing="10">
+                    <JFXComboBox fx:id="timeUnit" prefWidth="100" >
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <Label>
+                                    毫秒
+                                </Label>
+                                <Label>
+                                    秒
+                                </Label>
+                            </FXCollections>
+                        </items>
+                    </JFXComboBox>
+                </VBox>
+            </HBox>
+
+            <HBox spacing="50" maxWidth="800" maxHeight="300" alignment="CENTER_LEFT" style="-fx-padding:20 0 0 0 ">
+                <JFXButton fx:id="currentStampButton"  style="-fx-background-color: #5cb85c;" text="获取当前时间戳" textFill="WHITE" />
+                <TextField fx:id="outCurrentStamp" promptText="获取的时间戳" prefWidth="200" prefHeight="33" />
+                <VBox spacing="10">
+                    <JFXComboBox fx:id="currentTimeUnit" prefWidth="100" >
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <Label>
+                                    毫秒
+                                </Label>
+                                <Label>
+                                    秒
+                                </Label>
+                            </FXCollections>
+                        </items>
+                    </JFXComboBox>
+                </VBox>
+            </HBox>
+        </children>
+    </VBox>
+</StackPane>
+
+
+
