@@ -104,6 +104,8 @@
                 <version>2.3.0.RELEASE</version>
                 <configuration>
                     <mainClass>com.xtool.manager.MainDemo</mainClass>
+                    <finalName>XTool</finalName>
+                    <fork>true</fork>
                 </configuration>
                 <executions>
                     <execution>
