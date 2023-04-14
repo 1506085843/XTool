@@ -101,11 +101,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.3.0.RELEASE</version>
+                <version>2.6.0</version>
                 <configuration>
                     <mainClass>com.xtool.manager.MainDemo</mainClass>
                     <finalName>XTool</finalName>
-                    <fork>true</fork>
                 </configuration>
                 <executions>
                     <execution>
