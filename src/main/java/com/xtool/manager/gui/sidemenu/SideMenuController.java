@@ -106,9 +106,13 @@ public class SideMenuController {
 //    private Label lotteryTicket;
     @FXML
     @ActionTrigger("timeStamp")
-    private Label timeStamp;@FXML
+    private Label timeStamp;
+    @FXML
     @ActionTrigger("modifyDym")
     private Label modifyDym;
+    @FXML
+    @ActionTrigger("dateCalculation")
+    private Label dateCalculation;
 
     @FXML
     private JFXListView<Label> sideList;
@@ -166,6 +170,7 @@ public class SideMenuController {
 //        bindNodeToController(lotteryTicket, LotteryTicketController.class, contentFlow );
         bindNodeToController(timeStamp, TimeStampController.class, contentFlow );
         bindNodeToController(modifyDym, ModifyDymController.class, contentFlow );
+        bindNodeToController(dateCalculation, DateCalculationController.class, contentFlow );
     }
 
     private void bindNodeToController(Node node, Class<?> controllerClass, Flow flow) {

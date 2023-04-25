@@ -38,5 +38,6 @@
 <!--        <Label fx:id="lotteryTicket">彩票随机生成</Label>-->
         <Label fx:id="timeStamp">时间戳工具</Label>
         <Label fx:id="modifyDym">元数据批量修改</Label>
+        <Label fx:id="dateCalculation">日期计算</Label>
     </JFXListView>
 </StackPane>

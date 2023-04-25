@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox maxHeight="1050" maxWidth="1200" spacing="30">
+            <children>
+
+                <HBox spacing="20" alignment="BASELINE_LEFT" style="-fx-padding:60 0 0 0 ">
+                    <children>
+                        <Label style="-fx-font: 18 arial;-fx-text-fill: #5264ae;" text="日期推算:" />
+                    </children>
+                </HBox>
+                <HBox spacing="20" alignment="BASELINE_LEFT">
+                    <children>
+                        <StackPane StackPane.alignment="CENTER_RIGHT" maxWidth="140">
+                            <JFXTextField fx:id="year1" promptText="请输入年份" style="-fx-alignment: center;"></JFXTextField>
+                        </StackPane>
+                        <Label layoutX="55.0" layoutY="204.0" text="年"/>
+                        <VBox spacing="10">
+                            <JFXComboBox fx:id="month1" prefWidth="100" >
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <Label style="-fx-padding: 0 0 0 25;">1</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">2</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">3</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">4</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">5</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">6</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">7</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">8</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">9</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">10</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">11</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">12</Label>
+                                    </FXCollections>
+                                </items>
+                            </JFXComboBox>
+                        </VBox>
+                        <Label layoutX="55.0" layoutY="204.0" text="月"/>
+                        <StackPane StackPane.alignment="CENTER_RIGHT" maxWidth="140">
+                            <JFXTextField fx:id="day1" promptText="请输入日期" style="-fx-alignment: center;"></JFXTextField>
+                        </StackPane>
+                        <Label layoutX="55.0" layoutY="204.0" text="日"/>
+                    </children>
+                </HBox>
+                <HBox spacing="20" alignment="CENTER_LEFT">
+                    <children>
+                        <VBox spacing="10">
+                            <JFXComboBox fx:id="beforeOrafter" prefWidth="100">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <Label>向前</Label>
+                                        <Label>向后</Label>
+                                    </FXCollections>
+                                </items>
+                            </JFXComboBox>
+                        </VBox>
+                        <StackPane StackPane.alignment="CENTER_RIGHT" maxWidth="140">
+                            <JFXTextField fx:id="daysNumber"  promptText="请输入天数" style="-fx-alignment: center;"></JFXTextField>
+                        </StackPane>
+                        <Label layoutX="55.0" layoutY="204.0" text="天"/>
+                    </children>
+                </HBox>
+                <HBox spacing="20" alignment="CENTER_LEFT">
+                    <children>
+                        <JFXButton fx:id="dateCalculatButton" layoutX="55.0" style="-fx-background-color: #5cb85c;" text="推算日期" textFill="WHITE"/>
+                        <Label fx:id="dateCalculatResult" style="-fx-font: 15 arial;-fx-text-fill: #073763;" layoutX="55.0" layoutY="204.0" text=""/>
+                    </children>
+                </HBox>
+
+                <Label layoutX="55.0" layoutY="204.0" text="---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"/>
+
+                <HBox spacing="20" alignment="BASELINE_LEFT">
+                    <children>
+                        <Label style="-fx-font: 18 arial;-fx-text-fill: #5264ae;" text="计算日期差:"/>
+                    </children>
+                </HBox>
+                <HBox spacing="20" alignment="BASELINE_LEFT">
+                    <children>
+                        <StackPane StackPane.alignment="CENTER_RIGHT" maxWidth="140">
+                            <JFXTextField fx:id="year2" promptText="请输入年份" style="-fx-alignment: center;"></JFXTextField>
+                        </StackPane>
+                        <Label layoutX="55.0" layoutY="204.0" text="年"/>
+                        <VBox spacing="10">
+                            <JFXComboBox fx:id="month2" prefWidth="100">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <Label style="-fx-padding: 0 0 0 25;">1</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">2</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">3</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">4</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">5</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">6</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">7</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">8</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">9</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">10</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">11</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">12</Label>
+                                    </FXCollections>
+                                </items>
+                            </JFXComboBox>
+                        </VBox>
+                        <Label layoutX="55.0" layoutY="204.0" text="月"/>
+                        <StackPane StackPane.alignment="CENTER_RIGHT" maxWidth="140">
+                            <JFXTextField fx:id="day2" promptText="请输入日期" style="-fx-alignment: center;"></JFXTextField>
+                        </StackPane>
+                        <Label layoutX="55.0" layoutY="204.0" text="日"/>
+                    </children>
+                </HBox>
+                <HBox spacing="20" alignment="BASELINE_LEFT">
+                    <children>
+                        <StackPane StackPane.alignment="CENTER_RIGHT" maxWidth="140">
+                            <JFXTextField fx:id="year3" promptText="请输入年份" style="-fx-alignment: center;"></JFXTextField>
+                        </StackPane>
+                        <Label layoutX="55.0" layoutY="204.0" text="年"/>
+                        <VBox spacing="10">
+                            <JFXComboBox fx:id="month3" prefWidth="100">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <Label style="-fx-padding: 0 0 0 25;">1</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">2</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">3</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">4</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">5</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">6</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">7</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">8</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">9</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">10</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">11</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">12</Label>
+                                    </FXCollections>
+                                </items>
+                            </JFXComboBox>
+                        </VBox>
+                        <Label layoutX="55.0" layoutY="204.0" text="月"/>
+                        <StackPane StackPane.alignment="CENTER_RIGHT" maxWidth="140">
+                            <JFXTextField fx:id="day3" promptText="请输入日期" style="-fx-alignment: center;"></JFXTextField>
+                        </StackPane>
+                        <Label layoutX="55.0" layoutY="204.0" text="日"/>
+                    </children>
+                </HBox>
+                <HBox spacing="20" alignment="CENTER_LEFT">
+                    <children>
+                        <JFXButton fx:id="dateMinusButton" layoutX="55.0" style="-fx-background-color: #5cb85c;" text="计算日期差" textFill="WHITE"/>
+                        <Label fx:id="dateMinusResult" style="-fx-font: 15 arial;-fx-text-fill: #073763;" layoutX="55.0" layoutY="204.0" text=""/>
+                    </children>
+                </HBox>
+
+                <Label layoutX="55.0" layoutY="204.0" text="---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"/>
+
+                <HBox spacing="20" alignment="BASELINE_LEFT">
+                    <children>
+                        <Label style="-fx-font: 18 arial;-fx-text-fill: #5264ae;" text="日历查询:"/>
+                    </children>
+                </HBox>
+                <HBox spacing="20" alignment="BASELINE_LEFT">
+                    <children>
+                        <StackPane StackPane.alignment="CENTER_RIGHT" maxWidth="140">
+                            <JFXTextField fx:id="year4" promptText="请输入年份" style="-fx-alignment: center;"></JFXTextField>
+                        </StackPane>
+                        <Label layoutX="55.0" layoutY="204.0" text="年"/>
+                        <VBox spacing="10">
+                            <JFXComboBox fx:id="month4" prefWidth="100" >
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <Label style="-fx-padding: 0 0 0 25;">1</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">2</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">3</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">4</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">5</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">6</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">7</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">8</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">9</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">10</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">11</Label>
+                                        <Label style="-fx-padding: 0 0 0 25;">12</Label>
+                                    </FXCollections>
+                                </items>
+                            </JFXComboBox>
+                        </VBox>
+                        <Label layoutX="55.0" layoutY="204.0" text="月"/>
+                        <StackPane StackPane.alignment="CENTER_RIGHT" maxWidth="140">
+                            <JFXTextField fx:id="day4" promptText="请输入日期" style="-fx-alignment: center;"></JFXTextField>
+                        </StackPane>
+                        <Label layoutX="55.0" layoutY="204.0" text="日"/>
+                    </children>
+                </HBox>
+                <HBox spacing="20" alignment="BASELINE_LEFT">
+                    <children>
+                        <JFXButton fx:id="calendarButton" layoutX="55.0" style="-fx-background-color: #5cb85c;" text="查询日历" textFill="WHITE"/>
+                        <StackPane StackPane.alignment="CENTER_RIGHT" maxWidth="25">
+                            <JFXDatePicker fx:id="jFXDatePicker" visible="true"></JFXDatePicker>
+                        </StackPane>
+                        <Label fx:id="calendarResult" style="-fx-font: 15 arial;-fx-text-fill: #073763;" layoutX="55.0" layoutY="204.0" text=""/>
+                    </children>
+                </HBox>
+
+
+            </children>
+        </VBox>
+    </children>
+</StackPane>
