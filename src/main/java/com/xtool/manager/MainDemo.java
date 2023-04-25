@@ -14,6 +14,7 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
 
 
 public class MainDemo extends Application {
@@ -54,6 +55,7 @@ public class MainDemo extends Application {
                 JFoenixResources.load("css/jfoenix-design.css").toExternalForm(),
                 MainDemo.class.getResource("/css/jfoenix-main-demo.css").toExternalForm());
         stage.setScene(scene);
+        stage.getIcons().add(new Image(MainDemo.class.getResource("/images/taskBarInage.png").toExternalForm()));
         stage.show();
     }
 
