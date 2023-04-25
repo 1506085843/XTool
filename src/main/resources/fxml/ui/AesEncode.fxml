@@ -12,17 +12,17 @@
     <children>
         <VBox maxHeight="1050" maxWidth="1200" spacing="30" alignment="CENTER">
             <children>
-                <TextArea fx:id="inputArea" layoutX="55.0" layoutY="14.0" prefHeight="350.0" prefWidth="490.0" promptText="请输入待加密文本。（采用AES-CBC-128bits模式加/解密，密钥和向量都应该是16位，若长度不为16将使用默认密钥和向量）" style="-fx-padding: 5 5 5 5;" wrapText="true">
+                <TextArea fx:id="inputArea" layoutX="55.0" layoutY="14.0" prefHeight="350.0" prefWidth="490.0" promptText="请输入待加密文本。（采用AES-CBC-128bits模式加/解密，密钥和向量都应该是16位，若长度不为16将使用默认密钥和向量）" style="-fx-padding: 5 5 5 5;-fx-font: 15 arial;" wrapText="true">
                     <opaqueInsets>
                         <Insets />
                     </opaqueInsets>
                 </TextArea>
                 <HBox spacing="20"  alignment="CENTER_LEFT">
                     <children>
-                        <Label layoutX="55.0" layoutY="204.0" text="key密钥:" />
-                        <TextField fx:id="key" layoutX="125.0" layoutY="204.0" promptText="请输入16位密钥" text="LX%TB*19!@#HPAZW" />
-                        <Label layoutX="199.0" layoutY="204.0" text="iv向量:" />
-                        <TextField fx:id="vector" layoutX="125.0" layoutY="204.0" promptText="请输入16位向量" text="tr3f5m7kv019p4ad" />
+                        <Label layoutX="55.0" style="-fx-font: 14 arial;-fx-text-fill: #5264ae;" layoutY="204.0" text="key密钥:" />
+                        <TextField fx:id="key" layoutX="125.0" layoutY="204.0" prefWidth="200" prefHeight="33" promptText="请输入16位密钥" text="LX%TB*19!@#HPAZW" />
+                        <Label layoutX="199.0" style="-fx-font: 14 arial;-fx-text-fill: #5264ae;" layoutY="204.0" text="iv向量:" />
+                        <TextField fx:id="vector" layoutX="125.0" layoutY="204.0" prefWidth="200" prefHeight="33" promptText="请输入16位向量" text="tr3f5m7kv019p4ad" />
                     </children>
                 </HBox>
 
@@ -34,7 +34,7 @@
                         <JFXButton fx:id="clear" layoutX="199.0" layoutY="204.0" style="-fx-background-color: #c9302c;" text=" 清空 " textFill="WHITE" />
                     </children>
                 </HBox>
-                <TextArea fx:id="outArea" layoutX="55.0" layoutY="238.0" prefHeight="350.0" prefWidth="490.0" promptText="加密后的结果" style="-fx-padding: 5 5 5 5;" wrapText="true">
+                <TextArea fx:id="outArea" layoutX="55.0" layoutY="238.0" prefHeight="350.0" prefWidth="490.0" promptText="加密后的结果" style="-fx-padding: 5 5 5 5;-fx-font: 15 arial;" wrapText="true">
                     <opaqueInsets>
                         <Insets />
                     </opaqueInsets>

@@ -11,7 +11,7 @@
     <children>
         <VBox maxHeight="1050" maxWidth="1200" spacing="30" alignment="CENTER">
             <children>
-                <TextArea fx:id="inputArea" layoutX="55.0" layoutY="14.0"  prefHeight="350.0" prefWidth="490.0" promptText="请输入json字符串或json对象" style="-fx-padding: 5 5 5 5;" wrapText="true">
+                <TextArea fx:id="inputArea" layoutX="55.0" layoutY="14.0"  prefHeight="350.0" prefWidth="490.0" promptText="请输入json字符串或json对象" style="-fx-padding: 5 5 5 5;-fx-font: 15 arial;" wrapText="true">
                     <opaqueInsets>
                         <Insets />
                     </opaqueInsets>
@@ -24,7 +24,7 @@
                         <JFXButton fx:id="clear" layoutX="199.0" layoutY="204.0" style="-fx-background-color: #c9302c;" text=" 清空 " textFill="WHITE" />
                     </children>
                 </HBox>
-                <TextArea fx:id="outArea" layoutX="55.0" layoutY="238.0" prefHeight="350.0" prefWidth="385.0" promptText="校验/格式化后的结果" style="-fx-padding: 5 5 5 5;" wrapText="true">
+                <TextArea fx:id="outArea" layoutX="55.0" layoutY="238.0" prefHeight="350.0" prefWidth="385.0" promptText="校验/格式化后的结果" style="-fx-padding: 5 5 5 5;-fx-font: 15 arial;" wrapText="true">
                     <opaqueInsets>
                         <Insets />
                     </opaqueInsets>

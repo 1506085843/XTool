@@ -12,7 +12,7 @@
     <children>
         <VBox maxHeight="1050" maxWidth="1200" spacing="30" alignment="CENTER">
             <children>
-                <TextArea fx:id="inputArea" layoutX="55.0" layoutY="14.0" prefHeight="350.0" prefWidth="490.0" promptText="请输入你要编码/解码的文本" style="-fx-padding: 5 5 5 5;" wrapText="true">
+                <TextArea fx:id="inputArea" layoutX="55.0" layoutY="14.0" prefHeight="350.0" prefWidth="490.0" promptText="请输入你要编码/解码的文本" style="-fx-padding: 5 5 5 5;-fx-font: 15 arial;" wrapText="true">
                     <opaqueInsets>
                         <Insets />
                     </opaqueInsets>
@@ -26,7 +26,7 @@
                         <JFXButton fx:id="clear" layoutX="199.0" layoutY="204.0" style="-fx-background-color: #c9302c;" text=" 清空 " textFill="WHITE" />
                     </children>
                 </HBox>
-                <TextArea fx:id="outArea" layoutX="55.0" layoutY="238.0" prefHeight="350.0" prefWidth="490.0" promptText="编码/解码后的结果" style="-fx-padding: 5 5 5 5;" wrapText="true">
+                <TextArea fx:id="outArea" layoutX="55.0" layoutY="238.0" prefHeight="350.0" prefWidth="490.0" promptText="编码/解码后的结果" style="-fx-padding: 5 5 5 5;-fx-font: 15 arial;" wrapText="true">
                     <opaqueInsets>
                         <Insets />
                     </opaqueInsets>
