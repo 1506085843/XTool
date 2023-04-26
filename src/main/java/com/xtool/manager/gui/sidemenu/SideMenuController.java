@@ -121,7 +121,7 @@ public class SideMenuController {
     private JFXListView<Label> sideList;
 
     /**
-     * init fxml when loaded.
+     * 加载时初始化 fxml
      */
     @PostConstruct
     public void init() {

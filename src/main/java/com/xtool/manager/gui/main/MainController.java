@@ -1,5 +1,6 @@
 package com.xtool.manager.gui.main;
 
+import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.controls.JFXListView;
@@ -10,7 +11,6 @@ import com.jfoenix.controls.JFXRippler;
 import com.jfoenix.controls.JFXTooltip;
 import com.xtool.manager.datafx.ExtendedAnimatedFlowContainer;
 import com.xtool.manager.gui.sidemenu.SideMenuController;
-import com.xtool.manager.gui.uicomponents.ButtonController;
 import com.xtool.manager.gui.uicomponents.UrlEncodeController;
 import io.datafx.controller.ViewController;
 import io.datafx.controller.flow.Flow;
@@ -95,7 +95,7 @@ public final class MainController {
 
         // create the inner flow and content
         context = new ViewFlowContext();
-        // set the default controller
+        // 设置应用加载后的默认初始化页面
         Flow innerFlow = new Flow(UrlEncodeController.class);
 
         final FlowHandler flowHandler = innerFlow.createHandler(context);
@@ -112,16 +112,29 @@ public final class MainController {
             SWIPE_LEFT)));
     }
 
-    public static final class InputController {
+    public  final class InputController {
         @FXML
         private JFXListView<?> toolbarPopupList;
+        @FXML
+        private JFXDialog dialog;
 
-        // close application
         @FXML
         private void submit() {
             if (toolbarPopupList.getSelectionModel().getSelectedIndex() == 1) {
+                //退出应用
                 Platform.exit();
+            }else{
+                //联系我
+                dialog.setTransitionType(JFXDialog.DialogTransition.CENTER);
+                dialog.show((StackPane) drawer.getContent().get(0));
             }
         }
+
+        @FXML
+        private void iKnow() {
+            //我知道了
+            dialog.close();
+        }
+
     }
 }
