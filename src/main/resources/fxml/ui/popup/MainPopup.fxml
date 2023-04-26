@@ -7,8 +7,12 @@
 <?import com.jfoenix.controls.JFXDialog?>
 <?import com.jfoenix.controls.JFXDialogLayout?>
 <?import com.jfoenix.controls.JFXButton?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" >
+    <children>
+
 <JFXListView fx:id="toolbarPopupList" styleClass="option-list-view"
-             onMouseClicked="#submit" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+             onMouseClicked="#submit" >
     <Label>
         联系我
         <graphic>
@@ -26,28 +30,27 @@
         </graphic>
     </Label>
 
-    <StackPane>
-        <children>
-            <JFXDialog fx:id="dialog">
-                <JFXDialogLayout>
-                    <heading>
-                        <Label>联系我</Label>
-                    </heading>
-                    <body>
-                        <Label>
-                            Email: weifengdext@qq.com
-                        </Label>
-                        <Label style="-fx-padding: 60 0 0 0;">
-                            GitHub: https://github.com/1506085843
-                        </Label>
-                    </body>
-                    <actions>
-                        <JFXButton onMouseClicked="#iKnow" fx:id="acceptButton" styleClass="dialog-accept">知道了
-                        </JFXButton>
-                    </actions>
-                </JFXDialogLayout>
-            </JFXDialog>
-        </children>
-    </StackPane>
-
 </JFXListView>
+
+    <JFXDialog fx:id="dialog">
+        <JFXDialogLayout>
+            <heading>
+                <Label>联系我</Label>
+            </heading>
+            <body>
+                <Label>
+                    Email: weifengdext@qq.com
+                </Label>
+                <Label style="-fx-padding: 60 0 0 0;">
+                    GitHub: https://github.com/1506085843
+                </Label>
+            </body>
+            <actions>
+                <JFXButton onMouseClicked="#iKnow" fx:id="acceptButton" styleClass="dialog-accept">知道了
+                </JFXButton>
+            </actions>
+        </JFXDialogLayout>
+    </JFXDialog>
+
+    </children>
+</StackPane>
