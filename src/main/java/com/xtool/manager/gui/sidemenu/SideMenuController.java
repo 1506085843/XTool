@@ -113,6 +113,9 @@ public class SideMenuController {
     @FXML
     @ActionTrigger("dateCalculation")
     private Label dateCalculation;
+    @FXML
+    @ActionTrigger("fileDifferent")
+    private Label fileDifferent;
 
     @FXML
     private JFXListView<Label> sideList;
@@ -171,6 +174,7 @@ public class SideMenuController {
         bindNodeToController(timeStamp, TimeStampController.class, contentFlow );
         bindNodeToController(modifyDym, ModifyDymController.class, contentFlow );
         bindNodeToController(dateCalculation, DateCalculationController.class, contentFlow );
+        bindNodeToController(fileDifferent, FileDifferentController.class, contentFlow );
     }
 
     private void bindNodeToController(Node node, Class<?> controllerClass, Flow flow) {
