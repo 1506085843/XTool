@@ -11,10 +11,7 @@ import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 
 @ViewController(value = "/fxml/ui/LotteryTicket.fxml", title = "彩票随机生成")

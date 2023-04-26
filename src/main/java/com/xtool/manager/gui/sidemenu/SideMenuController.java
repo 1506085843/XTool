@@ -101,9 +101,9 @@ public class SideMenuController {
     @FXML
     @ActionTrigger("searchWord")
     private Label searchWord;
-//    @FXML
-//    @ActionTrigger("lotteryTicket")
-//    private Label lotteryTicket;
+    @FXML
+    @ActionTrigger("lotteryTicket")
+    private Label lotteryTicket;
     @FXML
     @ActionTrigger("timeStamp")
     private Label timeStamp;
@@ -170,7 +170,7 @@ public class SideMenuController {
         bindNodeToController(aesEncode, AesEncodeController.class, contentFlow );
         bindNodeToController(jsonFormat, JsonFormateController.class, contentFlow );
         bindNodeToController(searchWord, SearchWordController.class, contentFlow );
-//        bindNodeToController(lotteryTicket, LotteryTicketController.class, contentFlow );
+        bindNodeToController(lotteryTicket, LotteryTicketController.class, contentFlow );
         bindNodeToController(timeStamp, TimeStampController.class, contentFlow );
         bindNodeToController(modifyDym, ModifyDymController.class, contentFlow );
         bindNodeToController(dateCalculation, DateCalculationController.class, contentFlow );

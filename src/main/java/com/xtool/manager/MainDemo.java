@@ -9,7 +9,6 @@ import io.datafx.controller.flow.container.DefaultFlowContainer;
 import io.datafx.controller.flow.context.FXMLViewFlowContext;
 import io.datafx.controller.flow.context.ViewFlowContext;
 import javafx.application.Application;
-import javafx.application.HostServices;
 import javafx.collections.ObservableList;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
@@ -30,8 +29,6 @@ public class MainDemo extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-//        HostServices host = getHostServices();
-//        host.showDocument("C:\\Users\\kingdee\\Desktop\\as\\diff.html");
         Flow flow = new Flow(MainController.class);
         DefaultFlowContainer container = new DefaultFlowContainer();
         flowContext = new ViewFlowContext();

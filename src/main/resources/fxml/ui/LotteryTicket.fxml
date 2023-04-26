@@ -82,7 +82,7 @@
                     <JFXButton fx:id="clear" layoutX="199.0" layoutY="204.0" style="-fx-background-color: #c9302c;" text=" 清空 " textFill="WHITE" />
                 </children>
             </HBox>
-            <TextArea fx:id="outArea" layoutX="55.0" layoutY="238.0" prefHeight="400.0" prefWidth="385.0" promptText="生成的结果" style="-fx-padding: 5 5 5 5;" >
+            <TextArea fx:id="outArea" layoutX="55.0" layoutY="238.0" prefHeight="400.0" prefWidth="385.0" promptText="生成的结果" style="-fx-padding: 5 5 5 5;-fx-font: 15 arial;" >
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
