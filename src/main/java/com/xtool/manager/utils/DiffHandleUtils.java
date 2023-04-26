@@ -6,8 +6,10 @@ import com.github.difflib.patch.Patch;
 
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -138,7 +140,7 @@ public class DiffHandleUtils {
                 "  </body>\n" +
                 "</html>";
         template = template.replace("temp", builder.toString());
-        FileWriter f = null; //文件读取为字符流
+        File f = null; //文件读取为字符流
         //如果htmlPath文件夹不存在则创建
         File folder = new File(htmlPath);
         if (!folder.exists() && !folder.isDirectory()) {
@@ -146,11 +148,10 @@ public class DiffHandleUtils {
         }
         //写入diff.html
         try {
-            f = new FileWriter(htmlPath + "diff.html");
-            BufferedWriter buf = new BufferedWriter(f); //文件加入缓冲区
+            f = new File(htmlPath + "diff.html");
+            BufferedWriter buf = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(f), StandardCharsets.UTF_8)); //文件加入缓冲区
             buf.write(template); //向缓冲区写入
             buf.close(); //关闭缓冲区并将信息写入文件
-            f.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
