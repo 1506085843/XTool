@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox  maxHeight="1050" maxWidth="1200" spacing="30" >
+            <children>
+                <HBox spacing="20" alignment="BASELINE_LEFT" style="-fx-padding:130 0 0 0 ">
+                    <children>
+                        <TextField fx:id="direInput" promptText="请输入元数据所在文件夹路径" prefWidth="360" prefHeight="33" />
+                        <JFXButton fx:id="direButton" layoutX="55.0"  style="-fx-background-color: #5cb85c;" text="浏览目录" textFill="WHITE" />
+                    </children>
+                </HBox>
+                <TextField fx:id="searchWordInput" promptText="请输入待搜索或待替换的字符串" prefWidth="180" prefHeight="33"  maxWidth="360" />
+                <TextField fx:id="replaceWordInput" promptText="请输入替换的字符串" prefWidth="180" prefHeight="33"  maxWidth="360" />
+                <TextField fx:id="timeStampInput" promptText="请输入ModefyDate和Version里要改成的时间戳" prefWidth="360" prefHeight="33"  maxWidth="360" />
+
+                <HBox spacing="20">
+                    <children>
+                        <JFXButton fx:id="search" layoutX="55.0" layoutY="204.0" style="-fx-background-color: #5cb85c;" text="搜索" textFill="WHITE" />
+                        <JFXButton fx:id="searchAndChange" layoutX="55.0" layoutY="204.0" style="-fx-background-color: #5cb85c;" text="搜索且替换" textFill="WHITE" />
+                        <JFXButton fx:id="copy" layoutX="170.0" layoutY="204.0" style="-fx-background-color: #5cb85c;" text="复制结果" textFill="WHITE" />
+                        <JFXButton fx:id="clear" layoutX="199.0" layoutY="204.0" style="-fx-background-color: #c9302c;" text=" 清空 " textFill="WHITE" />
+                    </children>
+                </HBox>
+                <TextArea fx:id="outArea" layoutX="55.0" layoutY="238.0" prefHeight="400.0" prefWidth="385.0" promptText="结果" style="-fx-padding: 5 5 5 5;-fx-font: 15 arial;" >
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </TextArea>
+            </children>
+
+        </VBox>
+    </children>
+</StackPane>
+

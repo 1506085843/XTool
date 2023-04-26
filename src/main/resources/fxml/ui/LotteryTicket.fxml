@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="root" xmlns:fx="http://javafx.com/fxml/1"
+           xmlns="http://javafx.com/javafx/2.2">
+    <VBox  maxHeight="1050" maxWidth="1200" spacing="30" >
+        <children>
+            <HBox spacing="100" maxWidth="500" maxHeight="300" alignment="BASELINE_CENTER" style="-fx-padding:130 0 0 0 ">
+        <VBox spacing="20">
+            <Label styleClass="title-label">彩票类型</Label>
+            <JFXComboBox fx:id="ticketType" prefWidth="200" promptText="请选择">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <Label>
+                            福彩3D
+                        </Label>
+                        <Label>
+                            双色球
+                        </Label>
+                        <Label>
+                            七乐彩
+                        </Label>
+                        <Label>
+                            大乐透
+                        </Label>
+                        <Label>
+                            七星彩
+                        </Label>
+                        <Label>
+                            排列3
+                        </Label>
+                        <Label>
+                            排列5
+                        </Label>
+                    </FXCollections>
+                </items>
+            </JFXComboBox>
+        </VBox>
+
+        <VBox spacing="20">
+            <Label styleClass="title-label">注数</Label>
+            <JFXComboBox fx:id="ticketNumber" prefWidth="200" promptText="请选择">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <Label>
+                            1注
+                        </Label>
+                        <Label>
+                            3注
+                        </Label>
+                        <Label>
+                            5注
+                        </Label>
+                        <Label>
+                            10注
+                        </Label>
+                        <Label>
+                            15注
+                        </Label>
+                        <Label>
+                            100注
+                        </Label>
+                    </FXCollections>
+                </items>
+            </JFXComboBox>
+        </VBox>
+    </HBox>
+
+            <HBox spacing="20">
+                <children>
+                    <JFXButton fx:id="create" layoutX="55.0" layoutY="204.0" style="-fx-background-color: #5cb85c;" text="生成" textFill="WHITE" />
+                    <JFXButton fx:id="copy" layoutX="170.0" layoutY="204.0" style="-fx-background-color: #5cb85c;" text="复制结果" textFill="WHITE" />
+                    <JFXButton fx:id="clear" layoutX="199.0" layoutY="204.0" style="-fx-background-color: #c9302c;" text=" 清空 " textFill="WHITE" />
+                </children>
+            </HBox>
+            <TextArea fx:id="outArea" layoutX="55.0" layoutY="238.0" prefHeight="400.0" prefWidth="385.0" promptText="生成的结果" style="-fx-padding: 5 5 5 5;-fx-font: 15 arial;" >
+                <opaqueInsets>
+                    <Insets />
+                </opaqueInsets>
+            </TextArea>
+        </children>
+    </VBox>
+</StackPane>
+
+
+

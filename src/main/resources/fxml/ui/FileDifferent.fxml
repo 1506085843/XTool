@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox maxHeight="1050" maxWidth="1600" spacing="30" alignment="CENTER">
+            <children>
+
+                <HBox spacing="20"  alignment="CENTER_LEFT">
+                    <children>
+                        <TextArea fx:id="originalArea" layoutX="55.0" layoutY="14.0" prefHeight="650.0" prefWidth="700.0" promptText="请输入原始文本" style="-fx-padding: 5 5 5 5;-fx-font: 15 arial;" >
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </TextArea>
+
+                        <TextArea fx:id="finalArea" layoutX="55.0" layoutY="238.0" prefHeight="650.0" prefWidth="700.0" promptText="请输入要对比的文本" style="-fx-padding: 5 5 5 5;-fx-font: 15 arial;" >
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </TextArea>
+                    </children>
+                </HBox>
+
+                <HBox spacing="20" >
+                    <children>
+                        <JFXButton fx:id="compared" layoutX="55.0" layoutY="204.0" style="-fx-background-color: #5cb85c;-fx-font: 16 arial;" prefHeight="26" prefWidth="96" text="对比差异" textFill="WHITE" />
+                    </children>
+                </HBox>
+
+            </children>
+
+        </VBox>
+    </children>
+</StackPane>
+

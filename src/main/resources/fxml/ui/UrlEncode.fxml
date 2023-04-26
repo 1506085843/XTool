@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" >
+    <children>
+        <VBox maxHeight="1050" maxWidth="1200" spacing="30" alignment="CENTER">
+            <children>
+                <TextArea fx:id="inputArea" layoutX="55.0" layoutY="14.0" prefHeight="350.0" prefWidth="490.0" promptText="请输入你要编码/解码的url" style="-fx-padding: 5 5 5 5;-fx-font: 15 arial;" wrapText="true">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </TextArea>
+
+                <HBox spacing="20" >
+                    <children>
+                        <JFXButton fx:id="encode" layoutX="55.0" layoutY="204.0" style="-fx-background-color: #5cb85c;" text="url编码" textFill="WHITE" />
+                        <JFXButton fx:id="decode" layoutX="125.0" layoutY="204.0" style="-fx-background-color: #5cb85c;" text="url解码" textFill="WHITE" />
+                        <JFXButton fx:id="copy" layoutX="170.0" layoutY="204.0" style="-fx-background-color: #5cb85c;" text="复制结果" textFill="WHITE" />
+                        <JFXButton fx:id="clear"  layoutX="199.0" layoutY="204.0" style="-fx-background-color: #c9302c;" text="清空" textFill="WHITE" />
+                    </children>
+                </HBox>
+                <TextArea fx:id="outArea" layoutX="55.0" layoutY="238.0" prefHeight="350.0" prefWidth="490.0" promptText="编码/解码后的结果" style="-fx-padding: 5 5 5 5;-fx-font: 15 arial;" wrapText="true">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </TextArea>
+            </children>
+
+        </VBox>
+    </children>
+</StackPane>
