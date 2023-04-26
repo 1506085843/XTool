@@ -172,7 +172,7 @@ public class SideMenuController {
         bindNodeToController(searchWord, SearchWordController.class, contentFlow );
         bindNodeToController(lotteryTicket, LotteryTicketController.class, contentFlow );
         bindNodeToController(timeStamp, TimeStampController.class, contentFlow );
-        bindNodeToController(modifyDym, ModifyDymController.class, contentFlow );
+//        bindNodeToController(modifyDym, ModifyDymController.class, contentFlow );
         bindNodeToController(dateCalculation, DateCalculationController.class, contentFlow );
         bindNodeToController(fileDifferent, FileDifferentController.class, contentFlow );
     }
