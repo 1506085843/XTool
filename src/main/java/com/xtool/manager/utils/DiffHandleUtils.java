@@ -209,7 +209,7 @@ public class DiffHandleUtils {
             int start = (map.get("orgRow") + map.get("orgDel") - 1);
             start = start == -1 ? 0 : start;
             if (simb.contains("@@ -1,") && null == nexSimb && map.get("orgDel") != original.size()) {
-                insert(result, getOrigList(original, 0, original.size() - 1));
+                insert(result, getOrigList(original, start, original.size() - 1));
             } else if (null == nexSimb && (map.get("orgRow") + map.get("orgDel") - 1) < original.size()) {
                 insert(result, getOrigList(original, start, original.size() - 1));
             }
