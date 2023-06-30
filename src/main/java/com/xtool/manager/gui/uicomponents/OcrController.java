@@ -71,6 +71,8 @@ public class OcrController {
         fileButton.setOnAction(action -> {
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("选择图像文件");
+            FileChooser.ExtensionFilter fileExtensions = new FileChooser.ExtensionFilter("图片类型", "*.jpg","*.jpeg", "*.png", "*.bmp","*.pnm");
+            fileChooser.getExtensionFilters().add(fileExtensions);
             File file = fileChooser.showOpenDialog(new Stage());
             if (file != null) {
                 //获取图像路径
@@ -205,7 +207,6 @@ public class OcrController {
             String tessdata = "src/main/resources/tessdata";
             //如果代码是在jar包中运行就复制 resource/tessdata下的文件到 C:\tessdata\ ,因为识别时无法读取jar包中 resource/tessdata 下的文件
             if (runType != null && runType.startsWith("jar:")) {
-                System.out.println("jar包执行");
                 String tessdataPathTemp = "C:\\tessdata\\";
                 copyFile(tessdataPathTemp, "chi_sim.traineddata");
                 copyFile(tessdataPathTemp, "eng.traineddata");
