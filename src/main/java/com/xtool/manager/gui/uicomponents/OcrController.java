@@ -18,10 +18,14 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
+import org.apache.commons.io.FileUtils;
+
 import javax.annotation.PostConstruct;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 
 @ViewController(value = "/fxml/ui/Ocr.fxml", title = "OCR图片识字")
 public class OcrController {
@@ -197,7 +201,19 @@ public class OcrController {
             File image = new File(imagePath);
             //设置配置文件夹微视、识别语言、识别模式
             Tesseract tesseract = new Tesseract();
-            tesseract.setDatapath("src/main/resources/tessdata");
+            String runType = String.valueOf(OcrController.class.getResource("OcrController.class"));
+            String tessdata = "src/main/resources/tessdata";
+            //如果代码是在jar包中运行就复制 resource/tessdata下的文件到 C:\tessdata\ ,因为识别时无法读取jar包中 resource/tessdata 下的文件
+            if (runType != null && runType.startsWith("jar:")) {
+                System.out.println("jar包执行");
+                String tessdataPathTemp = "C:\\tessdata\\";
+                copyFile(tessdataPathTemp, "chi_sim.traineddata");
+                copyFile(tessdataPathTemp, "eng.traineddata");
+                copyFile(tessdataPathTemp, "osd.traineddata");
+                tesseract.setDatapath("src/main/resources/tessdata");
+                tessdata = "C:\\tessdata\\";
+            }
+            tesseract.setDatapath(tessdata);
             tesseract.setLanguage("chi_sim");
             tesseract.setPageSegMode(1);
             //设置引擎模式
@@ -257,4 +273,20 @@ public class OcrController {
             width = 500;
         }
     }
+
+    //复制resource下的文件到其他路径
+    public void copyFile(String filePath, String fileName) {
+        String filePthTemp = filePath + fileName;
+        File file = new File(filePthTemp);
+        //文件不存在就复制过去
+        if (!file.exists()) {
+            InputStream inputStream = FileDifferentController.class.getClassLoader().getResourceAsStream("tessdata/" + fileName);
+            try {
+                FileUtils.copyInputStreamToFile(inputStream, new File(filePath + fileName));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
 }
