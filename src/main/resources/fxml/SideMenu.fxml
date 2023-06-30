@@ -40,5 +40,6 @@
 <!--        <Label fx:id="modifyDym">元数据批量修改</Label>-->
         <Label fx:id="dateCalculation">日期计算</Label>
         <Label fx:id="fileDifferent">文本对比</Label>
+        <Label fx:id="ocr">OCR图片识字</Label>
     </JFXListView>
 </StackPane>

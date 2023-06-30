@@ -116,6 +116,9 @@ public class SideMenuController {
     @FXML
     @ActionTrigger("fileDifferent")
     private Label fileDifferent;
+    @FXML
+    @ActionTrigger("ocr")
+    private Label ocr;
 
     @FXML
     private JFXListView<Label> sideList;
@@ -175,6 +178,7 @@ public class SideMenuController {
 //        bindNodeToController(modifyDym, ModifyDymController.class, contentFlow );
         bindNodeToController(dateCalculation, DateCalculationController.class, contentFlow );
         bindNodeToController(fileDifferent, FileDifferentController.class, contentFlow );
+        bindNodeToController(ocr, OcrController.class, contentFlow );
     }
 
     private void bindNodeToController(Node node, Class<?> controllerClass, Flow flow) {

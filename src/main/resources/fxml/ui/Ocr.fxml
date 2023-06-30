@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox  maxHeight="1050" maxWidth="1200" spacing="30" >
+            <children>
+                <HBox spacing="20" alignment="BASELINE_LEFT" style="-fx-padding:130 0 0 0 ">
+                    <children>
+                        <JFXButton fx:id="fileButton" layoutX="55.0"  style="-fx-background-color: #5cb85c;" text="打开图片" textFill="WHITE"  />
+                        <JFXButton fx:id="identify" layoutX="170.0" layoutY="204.0" style="-fx-background-color: #5cb85c;" text="识别" textFill="WHITE" />
+                        <JFXButton fx:id="copy" layoutX="199.0" layoutY="204.0" style="-fx-background-color: #5cb85c;" text="复制结果" textFill="WHITE" />
+                        <JFXButton fx:id="clear" layoutX="219.0" layoutY="204.0" style="-fx-background-color: #c9302c;" text=" 清空 " textFill="WHITE" />
+                    </children>
+                </HBox>
+
+                <HBox spacing="20"  maxHeight="550" prefHeight="550" >
+                    <children>
+
+                        <SplitPane layoutX="55.0" layoutY="14.0" prefHeight="550.0" prefWidth="700.0" maxHeight="550" style="-fx-padding:10 10 -400 50;-fx-font: 15 arial;" >
+                            <VBox  maxHeight="550"  prefHeight="550" style="-fx-padding:0 10 0 40">
+                                <children>
+                                    <!-- 使用  visible="false" 隐藏顶部滚动条-->
+                                    <Slider fx:id="Hscroll"  min="0" translateY="-20" maxHeight="0" maxWidth="0" visible="false"></Slider>
+                                    <ImageView fx:id="image"  pickOnBounds="true" preserveRatio="false" />
+                                    <!-- 使用  visible="false" 隐藏底部滚动条 使用 maxWidth="0" 让宽度设为0也为了不显示-->
+                                    <Slider fx:id="zoomLvl" maxWidth="0"  max="6" min="1" visible="false"></Slider>
+                                    <!-- 使用  visible="false" 隐藏底部滚动条的名称 使用 maxHeight、maxWidth 让长宽为0也为了不显示-->
+                                    <Label fx:id="hint"  maxHeight="0" maxWidth="0" visible="false">缩放程度</Label>
+                                    <!-- 使用  visible="false" 隐藏右侧滚动条 使用 maxHeight、maxWidth 让长宽为0也为了不显示-->
+                                    <Slider fx:id="Vscroll" min="0" translateX="-20" orientation="VERTICAL"  maxHeight="0" maxWidth="0" visible="false"></Slider>
+                                    <!-- 使用  visible="false" 隐藏底部滚动条的值 使用 maxHeight、maxWidth 让长宽为0也为了不显示-->
+                                    <Label fx:id="value"  maxHeight="0" maxWidth="0" visible="false">1.0</Label>
+                                </children>
+                            </VBox>
+                        </SplitPane>
+
+                        <TextArea fx:id="resultArea" layoutX="55.0" layoutY="238.0" prefHeight="550.0" prefWidth="700.0" promptText="识别结果（仅支持识别中英文）" style="-fx-padding: 5 5 5 5;-fx-font: 15 arial;" >
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </TextArea>
+                    </children>
+                </HBox>
+
+            </children>
+        </VBox>
+    </children>
+</StackPane>
