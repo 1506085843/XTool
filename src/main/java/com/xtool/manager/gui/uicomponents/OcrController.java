@@ -1,9 +1,7 @@
 package com.xtool.manager.gui.uicomponents;
 
 import com.jfoenix.controls.JFXButton;
-import com.xtool.manager.utils.SearchWordUtils;
 import io.datafx.controller.ViewController;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
@@ -24,8 +22,6 @@ import javax.annotation.PostConstruct;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 @ViewController(value = "/fxml/ui/Ocr.fxml", title = "OCR图片识字")
 public class OcrController {
